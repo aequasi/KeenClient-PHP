@@ -424,7 +424,7 @@
 				}
 			}
 		},
-		"distinct": {
+		"selectUnique": {
 			"uri": "projects/{projectId}/queries/select_unique",
 			"description": "GET returns a list of UNIQUE resources in the event collection matching the given criteria. The response will be a simple JSON object with one key: result, which maps to an array of unique property values.",
 			"httpMethod": "GET",
