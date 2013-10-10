@@ -21,10 +21,11 @@ Usage
 This client was built using [Guzzle](http://guzzlephp.org/), a PHP HTTP client & framework for building RESTful web service clients.
 
 When you first create a new `KeenIOClient` instance, you can pass in your Project Id and API Keys, as well as an optional `version`
-property that is used to version the API url and Service Description used by the Web Service Client.  For certain API Resources, the Master API Key is required and can also be passed in the configuration array.  
+property that is used to version the API url and Service Description used by the Web Service Client.  For certain API Resources, the 
+Master API Key is required and can also be passed to the factory method in the configuration array.  
 
-For Requests, the Client will determine what API Key should be passed based on the type of Request and configuration in the
-[Service Description](/src/Resources/config/keen-io-3_0.json).
+For Requests, the KeenIOClient will determine what API Key should be passed based on the type of Request and configuration in the
+[Service Description](/src/KeenIO/Resources/config/keen-io-3_0.json).
 
 For a list of required and available parameters for the different Resources, please consult the Keen IO 
 [API Reference](https://keen.io/docs/api/reference/).
@@ -91,7 +92,7 @@ $result = $this->execute( $commands );
 
 ####Get Analysis on Events
 All Analysis Resources are supported.  See the [API Reference](https://keen.io/docs/api/reference/) Docs for required parameters.
-You can also check the [Service Description](/src/Resources/config/keen-io-3_0.json) for configured API Endpoints.
+You can also check the [Service Description](/src/KeenIO/Resources/config/keen-io-3_0.json) for configured API Endpoints.
 
 ######Example
 ```php
