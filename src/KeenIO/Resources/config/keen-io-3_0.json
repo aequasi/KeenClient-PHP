@@ -141,10 +141,29 @@
 					"type": "array",
 					"required": false
 				},
-				"timeframe":	{
+				"timeframe": {
 					"location": "query",
 					"description": "A Timeframe specifies the events to use for analysis based on a window of time. If no timeframe is specified, all events will be counted.",
 					"type": "string",
+					"required": false
+				},
+				"interval":	{
+					"location": "query",
+					"description": "Intervals are used when creating a Series API call. The interval specifies the length of each sub-timeframe in a Series.",
+					"type": "string",
+					"required": false
+				},
+				"timezone": {
+					"location": "query",
+					"description": "Modifies the timeframe filters for Relative Timeframes to match a specific timezone.",
+					"type": "number",
+					"required": false
+				},
+				"group_by": {
+					"location": "query",
+					"description": "The group_by parameter specifies the name of a property by which you would like to group the results.",
+					"type": [ "string", "array" ],
+					"filters": [ "json_encode" ],
 					"required": false
 				}
 			}
@@ -186,6 +205,12 @@
 				"timeframe":	{
 					"location": "query",
 					"description": "A Timeframe specifies the events to use for analysis based on a window of time. If no timeframe is specified, all events will be counted.",
+					"type": "string",
+					"required": false
+				},
+				"interval":	{
+					"location": "query",
+					"description": "Intervals are used when creating a Series API call. The interval specifies the length of each sub-timeframe in a Series.",
 					"type": "string",
 					"required": false
 				},
@@ -244,6 +269,12 @@
 					"type": "string",
 					"required": false
 				},
+				"interval":	{
+					"location": "query",
+					"description": "Intervals are used when creating a Series API call. The interval specifies the length of each sub-timeframe in a Series.",
+					"type": "string",
+					"required": false
+				},
 				"timezone": {
 					"location": "query",
 					"description": "Modifies the timeframe filters for Relative Timeframes to match a specific timezone.",
@@ -296,6 +327,12 @@
 				"timeframe":	{
 					"location": "query",
 					"description": "A Timeframe specifies the events to use for analysis based on a window of time. If no timeframe is specified, all events will be counted.",
+					"type": "string",
+					"required": false
+				},
+				"interval":	{
+					"location": "query",
+					"description": "Intervals are used when creating a Series API call. The interval specifies the length of each sub-timeframe in a Series.",
 					"type": "string",
 					"required": false
 				},
@@ -354,6 +391,12 @@
 					"type": "string",
 					"required": false
 				},
+				"interval":	{
+					"location": "query",
+					"description": "Intervals are used when creating a Series API call. The interval specifies the length of each sub-timeframe in a Series.",
+					"type": "string",
+					"required": false
+				},
 				"timezone": {
 					"location": "query",
 					"description": "Modifies the timeframe filters for Relative Timeframes to match a specific timezone.",
@@ -406,6 +449,12 @@
 				"timeframe":	{
 					"location": "query",
 					"description": "A Timeframe specifies the events to use for analysis based on a window of time. If no timeframe is specified, all events will be counted.",
+					"type": "string",
+					"required": false
+				},
+				"interval":	{
+					"location": "query",
+					"description": "Intervals are used when creating a Series API call. The interval specifies the length of each sub-timeframe in a Series.",
 					"type": "string",
 					"required": false
 				},
@@ -462,6 +511,25 @@
 					"location": "query",
 					"description": "A Timeframe specifies the events to use for analysis based on a window of time. If no timeframe is specified, all events will be counted.",
 					"type": "string",
+					"required": false
+				},
+				"interval":	{
+					"location": "query",
+					"description": "Intervals are used when creating a Series API call. The interval specifies the length of each sub-timeframe in a Series.",
+					"type": "string",
+					"required": false
+				},
+				"timezone": {
+					"location": "query",
+					"description": "Modifies the timeframe filters for Relative Timeframes to match a specific timezone.",
+					"type": "number",
+					"required": false
+				},
+				"group_by": {
+					"location": "query",
+					"description": "The group_by parameter specifies the name of a property by which you would like to group the results.",
+					"type": [ "string", "array" ],
+					"filters": [ "json_encode" ],
 					"required": false
 				}
 			}
@@ -526,17 +594,29 @@
 					"type": "array",
 					"required": false
 				},
+				"timeframe":	{
+					"location": "query",
+					"description": "A Timeframe specifies the events to use for analysis based on a window of time. If no timeframe is specified, all events will be counted.",
+					"type": "string",
+					"required": false
+				},
+				"interval":	{
+					"location": "query",
+					"description": "Intervals are used when creating a Series API call. The interval specifies the length of each sub-timeframe in a Series.",
+					"type": "string",
+					"required": false
+				},
+				"timezone": {
+					"location": "query",
+					"description": "Modifies the timeframe filters for Relative Timeframes to match a specific timezone.",
+					"type": "number",
+					"required": false
+				},
 				"group_by": {
 					"location": "query",
 					"description": "The group_by parameter specifies the name of a property by which you would like to group the results.",
 					"type": [ "string", "array" ],
 					"filters": [ "json_encode" ],
-					"required": false
-				},
-				"timeframe":	{
-					"location": "query",
-					"description": "A Timeframe specifies the events to use for analysis based on a window of time. If no timeframe is specified, all events will be counted.",
-					"type": "string",
 					"required": false
 				}
 			}
