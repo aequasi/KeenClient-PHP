@@ -20,8 +20,8 @@ Usage
 
 This client was built using [Guzzle](http://guzzlephp.org/), a PHP HTTP client & framework for building RESTful web service clients.
 
-When you first create a new KeenIOClient instance, you can pass in your Project Id and API Keys, as well as an optional `version`
-property that is used to version the API url and Service Description used by the Web Service Client.  
+When you first create a new `KeenIOClient` instance, you can pass in your Project Id and API Keys, as well as an optional `version`
+property that is used to version the API url and Service Description used by the Web Service Client.  For certain API Resources, the Master API Key is required and can also be passed in the configuration array.  
 
 For Requests, the Client will determine what API Key should be passed based on the type of Request and configuration in the
 [Service Description](/src/Resources/config/keen-io-3_0.json).
@@ -46,7 +46,7 @@ $client = KeenIOClient::factory([ 'projectId' => $projectId, 'writeKey' => $writ
 ```php
 
 $client->getConfig()->set('masterKey', $masterApiKey );
-$client->getConfig()->set('projectId', $newProjectId);
+$client->getConfig()->set('projectId', $newProjectId );
 
 ####Send an event to Keen
 Once you've created a `KeenIOClient`, sending events is simple:
@@ -111,6 +111,7 @@ $analyses = [
 	'average price'	=> [ "analysis_type" => "average", "target_property" => "purchase.price" ]
 ];
 $stats = $client->multiAnalysis([ 'event_collection' => 'purchases', 'analyses' => $analyses ]);
+```
 
 ###Create a Scoped Key
 
